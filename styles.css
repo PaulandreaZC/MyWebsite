@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com");
-@import url("https://fonts.gstatic.com");
-@import url("https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
 
 body {
     font-family: 'Jost', sans-serif;
@@ -15,6 +13,9 @@ h1, p{
     padding: 0;
 }
   
+p{
+  font-size: 20px;
+}
   /* Basic styling */
   .container {
     max-width: 800px;
@@ -51,11 +52,37 @@ h1, p{
     margin-bottom: 30px;
   }
   
-  h1 {
-    font-size: 24px;
-  }
-  
   img {
-    max-width: 100%;
+    max-width: 300px;
     height: auto;
+  }
+  .image-cropper {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-cropper img{
+    /* display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 150%; 
+    margin: 0 0 0 -20%; */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;  
+}
+
+  #title{
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .grid-container{
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: justify;
   }

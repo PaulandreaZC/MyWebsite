@@ -2,8 +2,8 @@
 
 body {
     font-family: 'Jost', sans-serif;
-    color: white;
-    background-color: #444245;
+    color: #444245;
+    background-color: white;
     margin: 0;
     padding: 0;
   }
@@ -17,8 +17,11 @@ p{
   font-size: 20px;
 }
   /* Basic styling */
+  div{
+    display: grid;
+  }
   .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
   }
@@ -30,12 +33,12 @@ p{
   }
   
   .topnav a {
-    float: right;
-    display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    float: left;
+    padding: 1%;
+    padding-left: 3%;
   }
   
   .topnav a:hover {
@@ -47,9 +50,24 @@ p{
     background-color: #4CAF50;
   }
   
+
+  .social-media{
+   float: right;
+   padding-right: 3%;
+   padding-top: 10px
+  }
+  
+
+  #linkedin{
+    width: 28px;
+  }
   /* Sections */
-  section {
-    margin-bottom: 30px;
+  section{
+    position: relative;
+    margin-top: 6%;
+    margin-bottom: 6%;
+    align-items: center;
+    display: grid;
   }
   
   img {
@@ -60,14 +78,10 @@ p{
     height: auto;
     position: relative;
     overflow: hidden;
+    align-items: center;
 }
 
 .image-cropper img{
-    /* display: block;
-    margin: 0 auto;
-    height: auto;
-    width: 150%; 
-    margin: 0 0 0 -20%; */
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
@@ -76,6 +90,7 @@ p{
 }
 
   #title{
+    margin-top: 15px;
     text-align: center;
     font-size: 40px;
   }
@@ -85,4 +100,77 @@ p{
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: justify;
+    position: relative;
   }
+  .grid-container h1{
+    text-align: center;
+  }
+
+  .animated-progress {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 20px 10px;
+    border: 1px solid grey;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .animated-progress span {
+    height: 100%;
+    display: block;
+    width: 0;
+    color: rgb(255, 251, 251);
+    line-height: 30px;
+    position: absolute;
+    text-align: end;
+    padding-right: 5px;
+  }
+  
+  .progress-spanish span {
+    background-color: green;
+    width: 100%;
+    text-align: center;
+  }
+
+  .progress-english span {
+    background-color: green;
+    width: 90%;
+    text-align: center;
+  }
+
+  .progress-dutch span {
+    background-color: green;
+    width: 60%;
+    text-align: center;
+  }
+
+  .subtitle{
+    font-weight: bold;
+  }
+
+  hr.solid {
+    position: relative;
+    width: 15%;
+    border-top: 3px solid #bbb;
+  }
+
+ #slide-show {
+    box-sizing: border-box
+} 
+.image-slideshow {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+img {
+  width: 100%
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 1}
+}

@@ -1,15 +1,15 @@
-let index = 0;
-displayImages();
-function displayImages() {
-  let i;
-  const images = document.getElementsByClassName("image");
-  for (i = 0; i < images.length; i++) {
-    images[i].style.display = "none";
-  }
-  index++;
-  if (index > images.length) {
-    index = 1;
-  }
-  images[index-1].style.display = "block";
-  setTimeout(displayImages, 6000); 
-}
+let currentIndex = 0;
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      const translateValue = -index * 100 + '%';
+      slider.style.transform = 'translateX(' + translateValue + ')';
+    }
+
+    // Example: Automatically slide every 3 seconds
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }, 3000);
+

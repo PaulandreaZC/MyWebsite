@@ -96,11 +96,11 @@ p{
     align-items: center;
     display: grid;
   }
-  
+
   #profile-picture{
     max-width: 300px;
     height: auto;
-    border-radius: 8%;  
+    border-radius: 50%;  
     margin: auto;
   }
 
@@ -205,7 +205,68 @@ p{
     width: 50%;
     height: auto;
     object-fit: cover;
+    border-radius: 15px;
   }
+  
   .personal-info{
     padding-left: 20px;
+  }
+
+  @media screen and (max-width:600px){
+    
+    #title {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 35px;
+  }
+    .topnav {
+      height: 50px;
+      background-color: #333;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .container-1{
+      margin-bottom: 0;
+    }
+
+    .container{
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    .container .left-side {
+      position: relative;
+      padding: 30px;
+      padding-bottom: 0;
+  }
+
+    .slide img {
+      width: 70%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 15px;
+  }
+  .topnav .link, .topnav .social-media, .topnav .space-left, .topnav .space-right {
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    right: 0%;
+    align-items: center;
+  }
+  
+  .topnav .link:hover, .topnav .social-media:hover {
+    background-color: #ddd;
+  }
+  .topnav .link a:hover, .topnav .social-media a:hover{
+    color: #333;
+  }
+  .topnav .space-right{
+    width: 18%;
+  }
   }

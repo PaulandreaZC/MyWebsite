@@ -34,5 +34,11 @@ function updatePictures() {
   slider.style.transform = `translateX(${translateValue}%)`;
 }
 
-
 startInterval();
+
+function openWhatsApp() {
+  var phoneNumber = '+31682232381';
+  var message = 'Hello, I want to get in contact.';
+  var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
+  window.open(whatsappURL, '_blank');
+}

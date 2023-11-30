@@ -1,3 +1,4 @@
+
 let currentIndex = 0;
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
@@ -42,3 +43,10 @@ function openWhatsApp() {
   var whatsappURL = 'https://api.whatsapp.com/send?phone=' + phoneNumber + '&text=' + encodeURIComponent(message);
   window.open(whatsappURL, '_blank');
 }
+
+var gallerySwiper = new Swiper('.bottom-section', {
+  navigation: {
+      nextEl: '.arrow right-arrow',
+      prevEl: '.arrow left-arrow',
+  },
+});
